@@ -50,7 +50,7 @@ export default function TiltingBusinessCard() {
           : "perspective(1500px)",
         transition: isHovering ? "transform 0.1s ease" : "transform 0.5s ease",
       }}
-      className={`w-full aspect-[2/3] md:w-96 md:h-56 bg-gradient-to-br from-red-500 to-orange-500 rounded-xl py-[25%] px-6 md:p-6 text-white text-center md:text-start relative overflow-hidden flex flex-col ${
+      className={`w-full aspect-[2/3] md:w-96 md:h-56 bg-gradient-to-tl from-red-500 to-orange-500 rounded-xl py-[25%] px-6 md:p-6 text-white text-center md:text-start relative overflow-hidden flex flex-col ${
         isHovering ? "shadow-2xl/45" : "shadow-2xl/60"
       }`}
     >
