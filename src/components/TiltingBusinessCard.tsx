@@ -8,27 +8,6 @@ export default function TiltingBusinessCard() {
   const [isHovering, setIsHovering] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const handleOrientation = (event: DeviceOrientationEvent) => {
-      const maxTilt = 15;
-      const tiltX = event.beta ?? 0; // front-back
-      const tiltY = event.gamma ?? 0; // left-right
-
-      setTilt({
-        x: Math.max(Math.min(tiltX / 3, maxTilt), -maxTilt),
-        y: Math.max(Math.min(tiltY / 3, maxTilt), -maxTilt),
-      });
-    };
-
-    if (window.DeviceOrientationEvent) {
-      window.addEventListener("deviceorientation", handleOrientation, true);
-    }
-
-    return () => {
-      window.removeEventListener("deviceorientation", handleOrientation);
-    };
-  }, []);
-
   // Handle mouse movement over card
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!cardRef.current) return;
