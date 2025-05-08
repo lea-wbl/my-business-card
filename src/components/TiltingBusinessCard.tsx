@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { FiGithub, FiGlobe, FiLinkedin } from "react-icons/fi";
 
 export default function TiltingBusinessCard() {
